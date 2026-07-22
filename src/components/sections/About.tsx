@@ -1,5 +1,5 @@
 import Container from "../layout/Container";
-import Fade from "../animations/fade";
+import Fade from "../animations/Fade";
 
 import about from "../../data/about";
 import { stats } from "../../data/stats";

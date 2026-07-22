@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import Fade from "../animations/fade";
+import Fade from "../animations/Fade";
 import Container from "../layout/Container";
 
 import {

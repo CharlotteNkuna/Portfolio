@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa";
 
-import Fade from "../animations/fade";
+import Fade from "../animations/Fade";
 import Container from "../layout/Container";
 import { certifications } from "../../data/certifications";
 
