@@ -1,0 +1,36 @@
+:root {
+  /* Backgrounds */
+  --background: #fff8fc;
+  --surface: #ffffff;
+
+  /* Brand Colors */
+  --primary: #f48fb1;
+  --secondary: #d8b4fe;
+  --accent: #ffc6d9;
+
+  /* Text */
+  --heading: #33272a;
+  --text: #5b5560;
+
+  /* Borders */
+  --border: #f6dce6;
+
+  /* Shadow */
+  --shadow: rgba(244, 143, 177, 0.15);
+}
+
+html.dark {
+  --background: #18151c;
+  --surface: #241f2b;
+
+  --primary: #ff8fb2;
+  --secondary: #c084fc;
+  --accent: #f9a8d4;
+
+  --heading: #ffffff;
+  --text: #dddddd;
+
+  --border: #3a3142;
+
+  --shadow: rgba(0, 0, 0, 0.35);
+}
