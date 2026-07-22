@@ -1,28 +1,17 @@
 export const certifications = [
-    {
-      title: "Systems Support (NQF Level 5)",
-      issuer: "Accredited Training Provider",
-      year: "2025",
-      description:
-        "Completed an NQF Level 5 qualification in Systems Support covering networking, troubleshooting, operating systems and technical support.",
-      link: "#",
-    },
-  
-    {
-      title: "Software Engineering (NQF Level 6)",
-      issuer: "Current Studies",
-      year: "In Progress",
-      description:
-        "Currently studying Software Engineering while building practical Java, React and TypeScript projects.",
-      link: "#",
-    },
-  
-    {
-      title: "Python Programming",
-      issuer: "Shaper Talent",
-      year: "2026",
-      description:
-        "Learning Python fundamentals including variables, loops, functions, file handling and object-oriented programming.",
-      link: "#",
-    },
-  ];
+  {
+    title: "Systems Support",
+    issuer: "SAQA Accredited Qualification",
+    year: "NQF Level 5 • Completed",
+    description:
+      "Completed a SAQA-accredited NQF Level 5 qualification in Systems Support, gaining practical knowledge in technical support, networking, operating systems, troubleshooting, and system administration.",
+  },
+
+  {
+    title: "Software Engineering",
+    issuer: "SAQA Accredited Qualification",
+    year: "NQF Level 6 • In Progress",
+    description:
+      "Currently studying a SAQA-accredited NQF Level 6 Diploma in Software Engineering, while learning programming, object-oriented programming, databases, web development, and modern software engineering practices.",
+  },
+];

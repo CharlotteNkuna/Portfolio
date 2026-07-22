@@ -1,23 +1,25 @@
 export const journey = [
     {
-      year: "2024",
+      year: "April 2025",
       title: "Started My Software Development Journey",
       description:
-        "Began learning programming fundamentals and discovered a passion for building software solutions.",
+        "Began learning programming fundamentals and discovered a passion for building software solutions. Started building end-to-end applications using Express.js, React, and modern web technologies.",
+        
     },
   
     {
-      year: "2025",
+      year: "March 2026",
       title: "Completed NQF Level 5 - Systems Support",
       description:
         "Developed a solid foundation in IT support, networking, troubleshooting and system administration.",
+        
     },
   
     {
-      year: "2026",
+      year: "April 2026",
       title: "Studying Software Engineering",
       description:
-        "Currently pursuing an NQF Level 6 Diploma in Software Engineering while building Java and React projects.",
+        "Currently pursuing an NQF Level 6 Diploma in Software Engineering while building Java and Angular projects.",
     },
   
     {

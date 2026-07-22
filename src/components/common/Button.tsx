@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   href?: string;
   onClick?: () => void;
   variant?: "primary" | "secondary";
   type?: "button" | "submit";
+  download?: boolean;
 }
 
 function Button({
@@ -14,6 +16,7 @@ function Button({
   onClick,
   variant = "primary",
   type = "button",
+  download = false,
 }: ButtonProps) {
   const baseClasses =
     "inline-flex items-center justify-center rounded-full px-8 py-4 font-semibold transition-all duration-300";
@@ -39,6 +42,7 @@ function Button({
     return (
       <motion.a
         href={href}
+        download={download}
         whileHover={{
           y: -3,
           scale: 1.04,

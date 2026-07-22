@@ -58,7 +58,7 @@ export const technicalSkills = [
   { name: "React", level: 88 },
   { name: "JavaScript", level: 88 },
   { name: "TypeScript", level: 75 },
-  { name: "Python", level: 70 },
+  { name: "Python", level: 50 },
   { name: "Spring Boot", level: 70 },
   { name: "Node.js", level: 75 },
   { name: "Express.js", level: 75 },

@@ -9,7 +9,7 @@ const about = {
   
   I discovered my passion for software development while working in a completely different industry. Since then, I've dedicated myself to learning modern technologies and building practical applications that solve real problems.
   
-  I completed my NQF Level 5 in Systems Support and I'm currently studying towards my Diploma in Software Engineering while continuously improving my skills through personal projects.
+  I completed my NQF Level 5 in Systems Support through my learnership and I'm currently studying towards my NQF Level 6 in Software Engineering while continuously improving my skills through personal projects.
   `,
   
     location: "South Africa",
@@ -18,7 +18,7 @@ const about = {
       "NQF Level 5 Systems Support",
   
     studying:
-      "Diploma in Software Engineering"
+      "NQF Level 6 in Software Engineering"
   };
   
   export default about;

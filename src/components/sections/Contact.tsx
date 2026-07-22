@@ -33,7 +33,6 @@ function Contact() {
       );
 
       alert("Message sent successfully!");
-
       form.current.reset();
     } catch (error) {
       console.error(error);
@@ -46,14 +45,19 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-32 overflow-hidden"
+      className="relative overflow-hidden py-32"
       style={{ background: "var(--background)" }}
     >
-      <div className="absolute left-0 top-0 w-96 h-96 rounded-full bg-pink-300/20 blur-[140px]" />
+      {/* ⭐ FIX - blobs cannot receive touches */}
 
-      <div className="absolute right-0 bottom-0 w-[450px] h-[450px] rounded-full bg-purple-300/20 blur-[150px]" />
+      <div className="pointer-events-none absolute left-0 top-0 h-96 w-96 rounded-full bg-pink-300/20 blur-[140px]" />
 
-      <Container>
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-purple-300/20 blur-[150px]" />
+
+      {/* ⭐ FIX - entire content above blobs */}
+
+      <Container className="relative z-20">
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,12 +85,14 @@ function Contact() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+
           {/* Left Side */}
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="relative z-30"   // ⭐ FIX
           >
             <InfoCard
               icon={<FaEnvelope />}
@@ -106,11 +112,13 @@ function Contact() {
               value={contact.location}
             />
 
-            <div className="flex gap-5 mt-8 text-3xl text-pink-500">
+            <div className="flex gap-6 mt-8 text-3xl">
+
               <a
                 href={contact.github}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                className="text-pink-500 hover:text-pink-600 transition"
               >
                 <FaGithub />
               </a>
@@ -118,11 +126,14 @@ function Contact() {
               <a
                 href={contact.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                className="text-pink-500 hover:text-pink-600 transition"
               >
                 <FaLinkedin />
               </a>
+
             </div>
+
           </motion.div>
 
           {/* Form */}
@@ -133,11 +144,11 @@ function Contact() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-3xl p-10 border"
+            className="relative z-30 rounded-3xl border p-10"   // ⭐ FIX
             style={{
               background: "var(--surface)",
               borderColor: "var(--border)",
-              boxShadow: `0 15px 40px var(--shadow)`,
+              boxShadow: "0 15px 40px var(--shadow)",
             }}
           >
             <input
@@ -179,13 +190,17 @@ function Contact() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-4 rounded-full bg-pink-500 text-white font-semibold transition hover:scale-105 disabled:opacity-50"
+              className="w-full rounded-full bg-pink-500 py-4 text-white font-semibold transition hover:scale-105 disabled:opacity-50"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
+
           </motion.form>
+
         </div>
+
       </Container>
+
     </section>
   );
 }
@@ -199,14 +214,14 @@ interface InfoProps {
 function InfoCard({ icon, title, value }: InfoProps) {
   return (
     <div
-      className="rounded-2xl p-6 border mb-5"
+      className="mb-5 rounded-2xl border p-6"
       style={{
         background: "var(--surface)",
         borderColor: "var(--border)",
       }}
     >
       <div className="flex items-center gap-4">
-        <div className="text-pink-500 text-2xl">
+        <div className="text-2xl text-pink-500">
           {icon}
         </div>
 

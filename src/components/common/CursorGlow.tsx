@@ -1,45 +1,46 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect } from "react";
 
 function CursorGlow() {
-  const [position, setPosition] = useState({
-    x: -200,
-    y: -200,
+  const mouseX = useMotionValue(-100);
+  const mouseY = useMotionValue(-100);
+
+  const x = useSpring(mouseX, {
+    stiffness: 120,
+    damping: 18,
+  });
+
+  const y = useSpring(mouseY, {
+    stiffness: 120,
+    damping: 18,
   });
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      setPosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
+    const move = (e: MouseEvent) => {
+      mouseX.set(e.clientX - 120);
+      mouseY.set(e.clientY - 120);
     };
 
-    window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mousemove", move);
 
     return () => {
-      window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("mousemove", move);
     };
   }, []);
 
   return (
     <motion.div
-      animate={{
-        x: position.x - 140,
-        y: position.y - 140,
+      style={{
+        x,
+        y,
       }}
-      transition={{
-        type: "spring",
-        damping: 25,
-        stiffness: 180,
-      }}
-      className="fixed pointer-events-none z-0"
+      className="fixed top-0 left-0 w-60 h-60 rounded-full pointer-events-none z-0"
     >
       <div
-        className="w-72 h-72 rounded-full blur-[110px]"
+        className="w-full h-full rounded-full blur-3xl opacity-30"
         style={{
           background:
-            "radial-gradient(circle, rgba(244,143,177,.22), rgba(192,132,252,.10), transparent)",
+            "radial-gradient(circle, rgba(244,143,177,.45) 0%, rgba(192,132,252,.25) 55%, transparent 100%)",
         }}
       />
     </motion.div>

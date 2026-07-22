@@ -1,20 +1,24 @@
+import recipeBook from "../assets/images/image.png";
+import bankingApp from "../assets/images/image2.png";
+import portfolio from "../assets/images/image3.png";
+
 export const projects = [
     {
-      title: "Employee Payroll System",
+      title: "Recipe Book",
       description:
-        "A Java console application that manages employees, calculates salaries and demonstrates Object-Oriented Programming principles.",
+      "A modern Angular application that allows users to browse, search, and manage delicious recipes through a clean and responsive user interface.",
   
-      image: "/images/projects/payroll.jpg",
+      image: recipeBook,
   
       technologies: [
-        "Java",
-        "OOP",
+        "Angular",
+        "TypeScript",
         "Git",
       ],
   
-      github: "https://github.com/CharlotteNkuna",
+      github: "https://github.com/CharlotteNkuna/My-Recipe-Book",
   
-      live: "#",
+      live: "https://my-recipe-book-liard.vercel.app/",    
     },
   
     {
@@ -23,7 +27,7 @@ export const projects = [
       description:
         "A modern responsive portfolio built using React, TypeScript and Tailwind CSS with dark mode support.",
   
-      image: "/images/projects/portfolio.jpg",
+      image: portfolio,
   
       technologies: [
         "React",
@@ -31,7 +35,7 @@ export const projects = [
         "Tailwind",
       ],
   
-      github: "https://github.com/CharlotteNkuna",
+      github: "https://github.com/CharlotteNkuna/Portfolio",
   
       live: "#",
     },
@@ -42,7 +46,7 @@ export const projects = [
       description:
         "Java banking application supporting deposits, withdrawals, transfers and account management.",
   
-      image: "/images/projects/atm.jpg",
+      image: bankingApp,
   
       technologies: [
         "Java",
@@ -50,27 +54,9 @@ export const projects = [
         "Collections",
       ],
   
-      github: "https://github.com/CharlotteNkuna",
+      github: "https://github.com/CharlotteNkuna/Java-Banking-app/tree/develop",
   
-      live: "#",
+      live: "https://charlottenkuna.github.io/Java-Banking-app/",
     },
-  
-    {
-      title: "Task Management App",
-  
-      description:
-        "A task management application built with React featuring local storage, filtering and responsive design.",
-  
-      image: "/images/projects/tasks.jpg",
-  
-      technologies: [
-        "React",
-        "JavaScript",
-        "CSS",
-      ],
-  
-      github: "https://github.com/CharlotteNkuna",
-  
-      live: "#",
-    },
+
   ];

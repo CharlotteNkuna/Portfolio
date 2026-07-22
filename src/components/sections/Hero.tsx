@@ -21,14 +21,15 @@ function Hero() {
     >
       {/* ================= BACKGROUND BLOBS ================= */}
 
-      <div className="absolute -top-20 -left-24 w-96 h-96 rounded-full bg-pink-300/30 blur-[120px]" />
+      <div className="absolute -top-20 -left-24 w-96 h-96 rounded-full bg-pink-300/30 blur-[120px] pointer-events-none" />
 
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-purple-300/20 blur-[150px]" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-purple-300/20 blur-[150px] pointer-events-none" />
 
-      <div className="absolute top-1/2 left-1/2 w-60 h-60 rounded-full bg-pink-200/20 blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 w-60 h-60 rounded-full bg-pink-200/20 blur-[120px] pointer-events-none" />
 
-      <Container className="pt-28 lg:pt-20">
-        <div className="grid lg:grid-cols-2 gap-20 items-center min-h-screen">
+      <Container className="relative z-10 pt-28 lg:pt-20">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center min-h-screen">
+
           {/* ================= LEFT SIDE ================= */}
 
           <motion.div
@@ -40,8 +41,10 @@ function Hero() {
               Hello, I'm
             </p>
 
-            <h1 className="text-6xl lg:text-7xl font-bold leading-tight "
-              style={{ color: "var(--heading)" }}>
+            <h1
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight"
+              style={{ color: "var(--heading)" }}
+            >
               Charlotte
               <br />
               Nkuna
@@ -49,7 +52,7 @@ function Hero() {
 
             {/* Typing Animation */}
 
-            <div className="mt-6 text-3xl font-semibold text-pink-500 h-12">
+            <div className="mt-6 text-2xl sm:text-3xl font-semibold text-pink-500 min-h-[48px]">
               <TypeAnimation
                 sequence={[
                   "Aspiring Full Stack Developer",
@@ -58,7 +61,7 @@ function Hero() {
                   2000,
                   "Java Developer",
                   2000,
-                  "Software Engineering Student",
+                  "Software Engineering in Progress",
                   2000,
                 ]}
                 wrapper="span"
@@ -67,10 +70,13 @@ function Hero() {
               />
             </div>
 
-            <p className="mt-8 text-lg leading-8 max-w-xl " style={{ color: "var(--text)" }}>
+            <p
+              className="mt-8 text-lg leading-8 max-w-xl"
+              style={{ color: "var(--text)" }}
+            >
               Passionate about building beautiful,
               responsive and user-friendly applications
-              using Java, React, TypeScript and modern web
+              using Java, React, JavaScript and modern web
               technologies. I enjoy turning ideas into
               meaningful digital experiences.
             </p>
@@ -84,20 +90,22 @@ function Hero() {
 
               <Button
                 variant="secondary"
-                href="/resume.pdf"
+                href="/CharlotteNkunaresume.pdf"
+                download
               >
                 Download CV
               </Button>
             </div>
 
-            {/* Socials */}
+            {/* Social Icons */}
 
-            <div className="flex gap-6 mt-10 text-2xl">
+            <div className="relative z-20 flex gap-6 mt-10 text-2xl">
               <a
                 href="https://github.com/CharlotteNkuna"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-pink-500 transition"
+                className="hover:text-pink-500 transition duration-300"
+                aria-label="GitHub"
               >
                 <FaGithub />
               </a>
@@ -106,14 +114,16 @@ function Hero() {
                 href="https://www.linkedin.com/in/charlotte-nkuna-27a40717a/"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-pink-500 transition"
+                className="hover:text-pink-500 transition duration-300"
+                aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </a>
 
               <a
                 href="mailto:cnkuna920@gmail.com"
-                className="hover:text-pink-500 transition"
+                className="hover:text-pink-500 transition duration-300"
+                aria-label="Email"
               >
                 <FaEnvelope />
               </a>
@@ -136,25 +146,26 @@ function Hero() {
                 duration: 4,
                 repeat: Infinity,
               }}
-              className="relative"
+              className="relative z-10"
             >
-              {/* Outer Ring */}
+              {/* Outer Glow */}
 
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 via-purple-300 to-pink-300 blur-xl opacity-60 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 via-purple-300 to-pink-300 blur-xl opacity-60 animate-pulse pointer-events-none" />
 
-              {/* Middle Ring */}
+              {/* Ring */}
 
-              <div className="absolute -inset-4 rounded-full border-2 border-pink-300"></div>
+              <div className="absolute -inset-4 rounded-full border-2 border-pink-300 pointer-events-none" />
 
-              {/* Image */}
+              {/* Profile Image */}
 
               <img
                 src={profile}
                 alt="Charlotte Nkuna"
-                className="relative w-80 h-80 lg:w-[420px] lg:h-[420px] rounded-full object-cover border-8 border-white shadow-2xl"
+                className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-full object-cover border-8 border-white shadow-2xl"
               />
             </motion.div>
           </motion.div>
+
         </div>
 
         {/* Scroll Indicator */}
@@ -167,10 +178,11 @@ function Hero() {
             duration: 1.5,
             repeat: Infinity,
           }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-pink-500 text-2xl"
+          className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 text-pink-500 text-2xl"
         >
           <FaChevronDown />
         </motion.div>
+
       </Container>
     </section>
   );
