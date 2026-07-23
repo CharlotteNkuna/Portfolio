@@ -10,7 +10,7 @@ import {
 import Container from "../layout/Container";
 import Button from "../common/Button";
 
-import profile from "../../assets/images/linkedin.png";
+import profile from "../../assets/images/linkedin.webp";
 
 function Hero() {
   return (

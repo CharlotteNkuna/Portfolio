@@ -1,6 +1,6 @@
-import recipeBook from "../assets/images/image.png";
-import bankingApp from "../assets/images/image2.png";
-import portfolio from "../assets/images/image3.png";
+import recipeBook from "../assets/images/image.webp";
+import bankingApp from "../assets/images/image2.webp";
+import portfolio from "../assets/images/image3.webp";
 
 export const projects = [
     {
