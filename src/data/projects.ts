@@ -1,5 +1,5 @@
 import recipeBook from "../assets/images/image.webp";
-import bankingApp from "../assets/images/image2.webp";
+import zkhiphani from "../assets/images/image2.webp";
 import portfolio from "../assets/images/image3.webp";
 
 export const projects = [
@@ -41,22 +41,24 @@ export const projects = [
     },
   
     {
-      title: "ATM Banking System",
-  
+      title: "Z'khiphani Mzansi",
+    
       description:
-        "Java banking application supporting deposits, withdrawals, transfers and account management.",
-  
-      image: bankingApp,
-  
+        "A modern event booking platform built with Angular where users can browse events, search by category, book tickets, complete a checkout process, and manage bookings. Includes authentication, role-based access, and an admin dashboard for managing events.",
+    
+      image: zkhiphani,
+    
       technologies: [
-        "Java",
-        "OOP",
-        "Collections",
+        "Angular",
+        "TypeScript",
+        "Bootstrap",
+        "Signals",
+        "LocalStorage"
       ],
-  
-      github: "https://github.com/CharlotteNkuna/Java-Banking-app/tree/develop",
-  
-      live: "https://charlottenkuna.github.io/Java-Banking-app/",
+    
+      github: "https://github.com/CharlotteNkuna/zkhiphani-mzansii",
+    
+      live: "https://vercel.com/charlotte-s-projects12/zkhiphani-mzansi-xu8r"
     },
 
   ];

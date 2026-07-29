@@ -13,7 +13,6 @@ function Projects() {
       className="relative py-32 overflow-hidden"
       style={{ background: "var(--background)" }}
     >
-      {/* Background */}
 
       <div className="absolute left-0 top-0 w-96 h-96 rounded-full bg-pink-300/20 blur-[140px] pointer-events-none" />
 
@@ -21,7 +20,6 @@ function Projects() {
 
       <Container className="relative z-10">
 
-        {/* Heading */}
 
         <Fade>
           <div className="text-center mb-20">
@@ -49,7 +47,6 @@ function Projects() {
           </div>
         </Fade>
 
-        {/* Cards */}
 
         <div className="grid lg:grid-cols-2 gap-10">
 
@@ -71,7 +68,6 @@ function Projects() {
                 }}
               >
 
-                {/* Image */}
 
                 <div className="h-60 overflow-hidden pointer-events-none">
 
@@ -86,7 +82,6 @@ function Projects() {
 
                 </div>
 
-                {/* Content */}
 
                 <div className="relative z-20 p-8 flex flex-col min-h-[430px]">
 
@@ -104,7 +99,6 @@ function Projects() {
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
 
                   <div className="flex flex-wrap gap-3 mt-6">
 
@@ -127,7 +121,6 @@ function Projects() {
 
                   </div>
 
-                  {/* Buttons */}
 
                   <div className="relative z-30 flex flex-wrap gap-4 mt-8">
 

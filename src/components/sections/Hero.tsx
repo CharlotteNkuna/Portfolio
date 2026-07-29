@@ -19,7 +19,6 @@ function Hero() {
       className="relative min-h-screen overflow-hidden flex items-center transition-colors duration-500"
       style={{ backgroundColor: "var(--background)" }}
     >
-      {/* ================= BACKGROUND BLOBS ================= */}
 
       <div className="absolute -top-20 -left-24 w-96 h-96 rounded-full bg-pink-300/30 blur-[120px] pointer-events-none" />
 
@@ -30,7 +29,6 @@ function Hero() {
       <Container className="relative z-10 pt-28 lg:pt-20">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center min-h-screen">
 
-          {/* ================= LEFT SIDE ================= */}
 
           <motion.div
             initial={{ opacity: 0, x: -80 }}
@@ -50,7 +48,6 @@ function Hero() {
               Nkuna
             </h1>
 
-            {/* Typing Animation */}
 
             <div className="mt-6 text-2xl sm:text-3xl font-semibold text-pink-500 min-h-[48px]">
               <TypeAnimation
@@ -81,7 +78,6 @@ function Hero() {
               meaningful digital experiences.
             </p>
 
-            {/* Buttons */}
 
             <div className="flex flex-wrap gap-5 mt-10">
               <Button href="#projects">
@@ -97,7 +93,6 @@ function Hero() {
               </Button>
             </div>
 
-            {/* Social Icons */}
 
             <div className="relative z-20 flex gap-6 mt-10 text-2xl">
               <a
@@ -130,7 +125,6 @@ function Hero() {
             </div>
           </motion.div>
 
-          {/* ================= RIGHT SIDE ================= */}
 
           <motion.div
             initial={{ opacity: 0, x: 80 }}
@@ -148,15 +142,12 @@ function Hero() {
               }}
               className="relative z-10"
             >
-              {/* Outer Glow */}
 
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 via-purple-300 to-pink-300 blur-xl opacity-60 animate-pulse pointer-events-none" />
 
-              {/* Ring */}
 
               <div className="absolute -inset-4 rounded-full border-2 border-pink-300 pointer-events-none" />
 
-              {/* Profile Image */}
 
               <img
                 src={profile}
@@ -168,7 +159,6 @@ function Hero() {
 
         </div>
 
-        {/* Scroll Indicator */}
 
         <motion.div
           animate={{
