@@ -56,7 +56,7 @@ export const projects = [
         "LocalStorage"
       ],
     
-      github: "https://github.com/CharlotteNkuna/zkhiphani-mzansii",
+      github: "https://github.com/CharlotteNkuna/Zkhiphani-Mzansi",
     
       live: "https://vercel.com/charlotte-s-projects12/zkhiphani-mzansi-xu8r"
     },
